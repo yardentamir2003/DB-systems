@@ -14,12 +14,13 @@ FROM teams
 WHERE team IN (
     SELECT DISTINCT Car
     FROM fastest_laps
-    WHERE TIME_TO_SEC(STR_TO_DATE(Time, '%i:%s.%f')) < 120
+    WHERE 
+        (MINUTE(STR_TO_DATE(Time, '%i:%s.%f')) * 60 +
+         SECOND(STR_TO_DATE(Time, '%i:%s.%f'))) < 120
 )
 GROUP BY team
 ORDER BY avg_pts DESC;
+
  """)
  print(', '.join(str(row) for row in cursor.fetchall()))
  
- 
- # Check if line 17 is allowed!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
