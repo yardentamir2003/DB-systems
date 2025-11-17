@@ -10,16 +10,55 @@ if __name__ == '__main__':
  cursor = mydb.cursor()
  cursor.execute("""
 SELECT 
-    d.Nationality,
-    AVG(d.pts) AS avg_pts,
-    MIN(STR_TO_DATE(f.time, '%i:%s.%f')) AS min_time,
-    MAX(STR_TO_DATE(w.date, '%Y-%m-%d')) AS latest
+    driver_avg.nationality,
+    driver_avg.avg_pts,
+    flaps.min_time,
+    wins.latest
+FROM (
+    SELECT 
+        d.Nationality AS nationality,
+        AVG(d.pts) AS avg_pts
+    FROM 
+        drivers d
+    GROUP BY 
+        d.Nationality
+) driver_avg
+LEFT JOIN (
+    SELECT 
+        d.Nationality AS nationality,
+        MIN(f.time) AS min_time
+    FROM 
+        drivers d
+        LEFT JOIN fastest_laps f ON d.driver = f.driver
+    GROUP BY 
+        d.Nationality
+) flaps ON driver_avg.nationality = flaps.nationality
+LEFT JOIN (
+    SELECT 
+        d.Nationality AS nationality,
+        MAX(w.date) AS latest
+    FROM 
+        drivers d
+        LEFT JOIN winners w ON d.driver = w.winner
+    GROUP BY 
+        d.Nationality
+) wins ON driver_avg.nationality = wins.nationality;
 
-FROM drivers d
-LEFT JOIN fastest_laps f 
-       ON d.driver = f.driver
-LEFT JOIN winners w
-       ON d.driver = w.winner
-GROUP BY d.Nationality
+
  """)
  print(', '.join(str(row) for row in cursor.fetchall()))
+
+# CHECK WHY NOT WORKING????????????????????????????????????????????????
+
+# SELECT 
+#     d.Nationality,
+#     AVG(d.pts) AS avg_pts,
+# 	MIN(f.time) AS min_time,    
+#     MAX(w.date) AS latest  
+
+# FROM drivers d
+# LEFT JOIN fastest_laps f 
+#        ON d.driver = f.driver
+# LEFT JOIN winners w
+#        ON d.driver = w.winner
+# GROUP BY d.Nationality

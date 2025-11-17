@@ -25,5 +25,3 @@ ORDER BY grandPrix1 ASC, grandPrix2 ASC;
  """)
  print(', '.join(str(row) for row in cursor.fetchall()))
  
- 
- # Doesn't return anything! :O
