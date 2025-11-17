@@ -9,14 +9,15 @@ if __name__ == '__main__':
  )
  cursor = mydb.cursor()
  cursor.execute("""
-SELECT DISTINCT drivers.Driver AS driver
-From winners
+SELECT DISTINCT Driver
+FROM drivers d 
 
-# Join drivers and winners tables by 'name code' field
-JOIN drivers ON winners.`Name Code` = drivers.`Name Code`
-WHERE winners.Car = 'Ferrari' OR drivers.Nationality = 'FRA'
+# Left join drivers, winners. avoid data loss (not every driver is a winner)
+LEFT JOIN winners w
+ON d.Driver = w.Winner
+WHERE w.Car='Ferrari' OR d.Nationality='FRA'
 
-# Sort alphabetically
-ORDER BY drivers.Driver ASC
+# Order matching drivers alphabetically
+ORDER BY Driver ASC
  """)
  print(', '.join(str(row) for row in cursor.fetchall()))

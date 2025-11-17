@@ -13,7 +13,8 @@ SELECT
     d.Nationality,
     AVG(d.pts) AS avg_pts,
     MIN(STR_TO_DATE(f.time, '%i:%s.%f')) AS min_time,
-    MAX(w.date) AS latest
+    MAX(STR_TO_DATE(w.date, '%Y-%m-%d')) AS latest
+
 FROM drivers d
 LEFT JOIN fastest_laps f 
        ON d.driver = f.driver

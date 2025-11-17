@@ -9,27 +9,23 @@ if __name__ == '__main__':
  )
  cursor = mydb.cursor()
  cursor.execute("""
-SELECT f.driver, MIN(f.time) AS min_time
-FROM fastest_laps f
-JOIN (
-    SELECT winner AS driver
-    FROM winners
-    WHERE YEAR(date) = 2000
-    GROUP BY winner
-    HAVING SUM(laps) = (
-        SELECT MAX(total_laps)
-        FROM (
-            SELECT winner, SUM(laps) AS total_laps
-            FROM winners
-            WHERE YEAR(date) = 2000
-            GROUP BY winner
-        ) AS t
-    )
-) AS max_driver
-ON f.driver = max_driver.driver
-GROUP BY f.driver;
+SELECT 
+    w.Winner AS driver,
+    TIME_FORMAT(MIN(STR_TO_DATE(f.Time, '%i:%s.%f')), '%i:%s.%f') AS min_time
+FROM winners w
+LEFT JOIN fastest_laps f
+ON w.Winner = f.Driver
+WHERE w.Winner = (
+    SELECT w1.Winner
+    FROM winners w1
+    WHERE YEAR(STR_TO_DATE(w1.Date, '%Y-%m-%d')) = 2000
+    GROUP BY w1.Winner
+    ORDER BY SUM(w1.Laps) DESC
+    LIMIT 1
+)
+GROUP BY w.Winner;
  """)
  print(', '.join(str(row) for row in cursor.fetchall()))
  
  
- # total number of laps in the year 2000. not sure if that was the instruction - SOULD ASK IN THE MOODLE!
+ # Is it llowed to use TIME_FORMAT
