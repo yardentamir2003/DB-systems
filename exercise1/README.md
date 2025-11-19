@@ -5,7 +5,7 @@ q4: passed
 q5: FAILED!
 q6: passed
 q7: passed 
-q8: passed
-q9: failed both
+q8: FAILED! (after updating tables, result changed and incorrect!)
+q9: FAILED!
 
-TO DO: 5, 9, check 3
+TO DO: 5, 8, 9, check 3
