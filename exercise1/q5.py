@@ -9,13 +9,14 @@ if __name__ == '__main__':
  )
  cursor = mydb.cursor()
  cursor.execute("""
-SELECT t.Car,
-       AVG(t.pts) AS avg_pts
-FROM teams t
+SELECT 
+    t.Car,
+    AVG(t.pts) AS avg_pts
+FROM teams_updated t
 WHERE t.Car IN (
-    SELECT DISTINCT car
-    FROM fastest_laps
-    WHERE TIME_TO_SEC(STR_TO_DATE(time, '%i:%s.%f')) < 120
+    SELECT DISTINCT f.Car
+    FROM fastest_laps_updated f
+    WHERE MINUTE(STR_TO_DATE(f.Time, '%i:%s.%f')) < 2
 )
 GROUP BY t.Car
 ORDER BY avg_pts DESC;

@@ -11,8 +11,8 @@ if __name__ == '__main__':
  cursor.execute("""
 SELECT
     (
-        (SELECT SUM(pts) FROM teams WHERE Car = 'Ferrari') -
-        (SELECT SUM(pts) FROM teams WHERE Car = 'Maserati')
+        (SELECT SUM(pts) FROM teams_updated WHERE Car = 'Ferrari') -
+        (SELECT SUM(pts) FROM teams_updated WHERE Car = 'Maserati')
     ) AS diff;
  """)
  print(', '.join(str(row) for row in cursor.fetchall()))

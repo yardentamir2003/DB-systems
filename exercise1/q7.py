@@ -10,7 +10,7 @@ if __name__ == '__main__':
  cursor = mydb.cursor()
  cursor.execute("""
 SELECT DISTINCT Driver
-FROM drivers d 
+FROM drivers_updated d 
 
 # Left join drivers, winners. avoid data loss (not every driver is a winner)
 LEFT JOIN winners w

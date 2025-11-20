@@ -9,8 +9,11 @@ if __name__ == '__main__':
  )
  cursor = mydb.cursor()
  cursor.execute("""
+# Use DISTINCT to avoid duplicates
 SELECT DISTINCT driver 
-FROM drivers
-WHERE drivers.nationality = 'ITA'
+FROM drivers_updated
+
+# Return all drivers from Italy
+WHERE nationality = 'ITA'
  """)
  print(', '.join(str(row) for row in cursor.fetchall()))
