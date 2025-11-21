@@ -9,7 +9,7 @@ if __name__ == '__main__':
  )
  cursor = mydb.cursor()
  cursor.execute("""
-# Use DISTINCT to avoid duplicates
+# Use distinct to avoid duplicates
 SELECT DISTINCT driver 
 FROM drivers_updated
 

@@ -9,7 +9,7 @@ if __name__ == '__main__':
  )
  cursor = mydb.cursor()
  cursor.execute("""
-SELECT DISTINCT w1.`Grand Prix` AS grandPrix1, w2.`Grand Prix` AS grandPrix2
+SELECT DISTINCT w1.`Grand Prix` AS grandPrix1, w2.`Grand Prix` AS grandPrix2, w1.Laps
 
 # Self join on winners table
 FROM winners w1
@@ -20,7 +20,7 @@ ON w1.Laps = w2.Laps
 
 # Avoid pairing grand prix with itself
 AND w1.`Grand Prix` < w2.`Grand Prix`
-WHERE w1.Laps > 80
+WHERE w1.Laps >= 80
 ORDER BY grandPrix1 ASC, grandPrix2 ASC;
  """)
  print(', '.join(str(row) for row in cursor.fetchall()))

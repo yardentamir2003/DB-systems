@@ -15,7 +15,7 @@ FROM drivers_updated d
 # Left join drivers, winners. avoid data loss (not every driver is a winner)
 LEFT JOIN winners w
 ON d.Driver = w.Winner
-WHERE w.Car='Ferrari' OR d.Nationality='FRA'
+WHERE w.Car='Ferrari' OR d.Nationality='ARG'
 
 # Order matching drivers alphabetically
 ORDER BY Driver ASC

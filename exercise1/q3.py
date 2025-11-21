@@ -10,9 +10,7 @@ if __name__ == '__main__':
  cursor = mydb.cursor()
  cursor.execute("""
 # Return driver's name and minimum time for lap
-SELECT 
-    w.Winner AS driver,
-    MIN(f.time) AS min_time
+SELECT w.Winner AS driver, MIN(f.time) AS min_time
     
 # Left join by winner=driver
 FROM winners w

@@ -9,6 +9,8 @@ if __name__ == '__main__':
  )
  cursor = mydb.cursor()
  cursor.execute("""
+                
+# Calculate total point for Ferrari and Maseri. Then, calaculate the diff
 SELECT
     (
         (SELECT SUM(pts) FROM teams_updated WHERE Car = 'Ferrari') -
