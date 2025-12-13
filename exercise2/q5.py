@@ -11,9 +11,10 @@ if __name__ == '__main__':
 
     cursor = mydb.cursor()
     
-    # Executing the SQL Query
+    # Add pre_order_avaliable column to upcoming table, set default value to 0
     cursor.execute("""
-    ## PUT YOUR QUERY HERE ##
+    ALTER TABLE upcoming 
+    ADD pre_order_avaliable BIT(1) DEFAULT 0;
     """)
 
     # !!! Commit the transaction to save the changes to the database!!!
