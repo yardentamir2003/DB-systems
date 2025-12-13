@@ -11,13 +11,14 @@ if __name__ == '__main__':
 
     cursor = mydb.cursor()
     
-    # Executing the SQL Query
+    # Update UK number to 5 where US number is 6
     cursor.execute("""
-    ## PUT YOUR QUERY HERE ##
+    UPDATE size
+    SET uk_number = 5
+    WHERE us_number = 6
     """)
 
     # !!! Commit the transaction to save the changes to the database!!!
     mydb.commit()
-    
     cursor.close()
     mydb.close()
