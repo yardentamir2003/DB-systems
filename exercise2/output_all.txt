@@ -172,7 +172,7 @@ Running: q11_1.py
 ========================================
 Running: q11_2.py
 ========================================
-(1, 'Air CS 0/1', Decimal('150')), (2, 'Yeezy Gauss 360', Decimal('220')), (3, '1B All Star', Decimal('60')), (4, 'Jordan 1 Engineering', Decimal('170')), (5, 'BIU Superstar', Decimal('90')), (6, 'Lunar Glow', Decimal('200')), (7, 'HyperFlux', Decimal('180')), (8, 'Nebula Runner', Decimal('140')), (9, 'Quantum Charge', Decimal('250')), (10, 'Echo Boost', Decimal('160')), (11, 'Storm Runner', Decimal('130')), (12, 'Apex Boost', Decimal('190')), (13, 'Velocity Wave', Decimal('170')), (14, 'Stride Master', Decimal('100')), (15, 'Trail Blazer', Decimal('200')), (16, 'Infinity Glide', Decimal('180')), (17, 'Solar Charge', Decimal('150')), (18, 'Pace Leader', Decimal('120')), (19, 'Canyon Racer', Decimal('250')), (20, 'Sky High', Decimal('210'))
+(1, 'Air CS 0/1', 150), (2, 'Yeezy Gauss 360', 220), (3, '1B All Star', 60), (4, 'Jordan 1 Engineering', 170), (5, 'BIU Superstar', 90), (6, 'Lunar Glow', 200), (7, 'HyperFlux', 180), (8, 'Nebula Runner', 140), (9, 'Quantum Charge', 250), (10, 'Echo Boost', 160), (11, 'Storm Runner', 0), (12, 'Apex Boost', 0), (13, 'Velocity Wave', 0), (14, 'Stride Master', 0), (15, 'Trail Blazer', 0), (16, 'Infinity Glide', 0), (17, 'Solar Charge', 0), (18, 'Pace Leader', 0), (19, 'Canyon Racer', 0), (20, 'Sky High', 0)
 
 
 ========================================

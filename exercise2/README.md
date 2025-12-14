@@ -1,6 +1,4 @@
-Question 4:
-what is the difference between us to uk shoe size? (men: uk is 1 size smaller, women: uk is 2 size smaller)
-right now, initialized to NULLs
-
 Question 11:
-should add shoes with 0 orders to result? right now wrong...
+should add shoes with 0 orders to result? right now i do add them with revenue 0.
+
+ADD DOCUMENTATION!
