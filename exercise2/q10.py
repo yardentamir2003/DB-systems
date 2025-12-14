@@ -11,9 +11,15 @@ if __name__ == '__main__':
 
     cursor = mydb.cursor()
     
-    # Executing the SQL Query
+    # Combine the list of shoe names from the inventory with the list of special upcoming collection names
     cursor.execute("""
-    ## PUT YOUR QUERY HERE ##
+    # Use aliasing for hard code a value = Inventory
+    SELECT s.shoe_name AS name, 'Inventory' AS source
+    FROM shoe s
+    UNION
+    # Use aliasing for hard code a value = Inventory
+    SELECT u.collection_name AS name, 'Upcoming Release' AS source
+    FROM upcoming u;
     """)
 
     # Fetch and print results as required by Listing 2

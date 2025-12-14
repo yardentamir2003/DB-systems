@@ -11,9 +11,14 @@ if __name__ == '__main__':
 
     cursor = mydb.cursor()
     
-    # Executing the SQL Query
+    # Create a view summarizing total sales per shoe
     cursor.execute("""
-    ## PUT YOUR QUERY HERE ##
+    CREATE VIEW total_sales_per_shoe AS
+    # Calculate total revenue by multipling orders*price
+    SELECT s.shoe_id, s.shoe_name, COUNT(os.shoe_id)*s.price AS total_revenue
+    FROM shoe s
+    LEFT JOIN  order_shoe os ON s.shoe_id = os.shoe_id
+    GROUP BY s.shoe_id;
     """)
 
     # !!! Commit the transaction to save the changes to the database!!!

@@ -11,9 +11,9 @@ if __name__ == '__main__':
 
     cursor = mydb.cursor()
     
-    # Executing the SQL Query
+    # Display the entire view data
     cursor.execute("""
-    ## PUT YOUR QUERY HERE ##
+    SELECT * FROM total_sales_per_shoe;
     """)
 
     # Fetch and print results as required by Listing 2
