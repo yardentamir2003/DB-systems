@@ -1,0 +1,183 @@
+RUN_ALL USING PYTHON = C:\Python313\python.exe
+
+========================================
+Running: q1.py
+========================================
+
+
+========================================
+Running: q2_1.py
+========================================
+
+
+========================================
+Running: q2_2.py
+========================================
+
+
+========================================
+Running: q2_3.py
+========================================
+
+
+========================================
+Running: q2_4.py
+========================================
+
+
+========================================
+Running: q2_5.py
+========================================
+
+
+========================================
+Running: q2_6.py
+========================================
+
+
+========================================
+Running: q2_7.py
+========================================
+
+
+========================================
+Running: q2_8.py
+========================================
+
+
+========================================
+Running: q2_9.py
+========================================
+
+
+========================================
+Running: q2_10.py
+========================================
+
+
+========================================
+Running: q3_1.py
+========================================
+
+
+========================================
+Running: q3_2.py
+========================================
+
+
+========================================
+Running: q3_3.py
+========================================
+
+
+========================================
+Running: q3_4.py
+========================================
+
+
+========================================
+Running: q3_5.py
+========================================
+
+
+========================================
+Running: q3_6.py
+========================================
+
+
+========================================
+Running: q3_7.py
+========================================
+
+
+========================================
+Running: q3_8.py
+========================================
+
+
+========================================
+Running: q3_9.py
+========================================
+
+
+========================================
+Running: q3_10.py
+========================================
+
+
+========================================
+Running: q4.py
+========================================
+
+
+========================================
+Running: q5.py
+========================================
+
+
+========================================
+Running: q6_1.py
+========================================
+
+
+========================================
+Running: q6_2.py
+========================================
+
+
+========================================
+Running: q6_3.py
+========================================
+
+
+========================================
+Running: q6_4.py
+========================================
+
+
+========================================
+Running: q6_5.py
+========================================
+
+
+========================================
+Running: q7.py
+========================================
+('Alice', 'Brown', Decimal('170')), ('John', 'Doe', Decimal('370')), ('Bob', 'White', Decimal('90')), ('Eve', 'Green', Decimal('200')), ('Chris', 'Black', Decimal('180')), ('Anna', 'Taylor', Decimal('140')), ('Max', 'Johnson', Decimal('250')), ('Lily', 'Adams', Decimal('160')), ('Oscar', 'Hill', Decimal('0')), ('Jane', 'Smith', Decimal('60'))
+
+
+========================================
+Running: q8.py
+========================================
+(36, 4, Decimal('205.0000')), (40, 8, Decimal('185.0000')), (47, 15, Decimal('180.0000')), (46, 14, Decimal('165.0000')), (44, 12, Decimal('163.7500')), (37, 5, Decimal('160.0000')), (41, 9, Decimal('157.5000')), (45, 13, Decimal('156.2500')), (43, 11, Decimal('151.4286')), (38, 6, Decimal('150.0000')), (39, 7, Decimal('150.0000')), (42, 10, Decimal('150.0000'))
+
+
+========================================
+Running: q9.py
+========================================
+('Air CS 0/1', 5), ('Yeezy Gauss 360', 5), ('1B All Star', 5), ('Jordan 1 Engineering', 5), ('BIU Superstar', 5), ('Lunar Glow', 5), ('HyperFlux', 5), ('Nebula Runner', 5), ('Quantum Charge', 5), ('Echo Boost', 5), ('Storm Runner', 0), ('Apex Boost', 0), ('Velocity Wave', 0), ('Stride Master', 0), ('Trail Blazer', 0), ('Infinity Glide', 0), ('Solar Charge', 0), ('Pace Leader', 0), ('Canyon Racer', 0), ('Sky High', 0)
+
+
+========================================
+Running: q10.py
+========================================
+('Air CS 0/1', 'Inventory'), ('Yeezy Gauss 360', 'Inventory'), ('1B All Star', 'Inventory'), ('Jordan 1 Engineering', 'Inventory'), ('BIU Superstar', 'Inventory'), ('Lunar Glow', 'Inventory'), ('HyperFlux', 'Inventory'), ('Nebula Runner', 'Inventory'), ('Quantum Charge', 'Inventory'), ('Echo Boost', 'Inventory'), ('Storm Runner', 'Inventory'), ('Apex Boost', 'Inventory'), ('Velocity Wave', 'Inventory'), ('Stride Master', 'Inventory'), ('Trail Blazer', 'Inventory'), ('Infinity Glide', 'Inventory'), ('Solar Charge', 'Inventory'), ('Pace Leader', 'Inventory'), ('Canyon Racer', 'Inventory'), ('Sky High', 'Inventory'), ('Air Max Day 2025', 'Upcoming Release'), ('Spring Breeze Collection', 'Upcoming Release'), ('Yeezy Glow Pack', 'Upcoming Release'), ('Summer Neon Edition', 'Upcoming Release'), ('Jordan Anniversary', 'Upcoming Release'), ('Jordan Lunar Collection', 'Upcoming Release'), ('Lunar Bright Collection', 'Upcoming Release'), ('HyperFlux Supreme', 'Upcoming Release'), ('Quantum Special Edition', 'Upcoming Release'), ('Winter Starlight Pack', 'Upcoming Release'), ('Echo Runner Series', 'Upcoming Release'), ('Trail Explorer Edition', 'Upcoming Release')
+
+
+========================================
+Running: q11_1.py
+========================================
+
+
+========================================
+Running: q11_2.py
+========================================
+(1, 'Air CS 0/1', Decimal('150')), (2, 'Yeezy Gauss 360', Decimal('220')), (3, '1B All Star', Decimal('60')), (4, 'Jordan 1 Engineering', Decimal('170')), (5, 'BIU Superstar', Decimal('90')), (6, 'Lunar Glow', Decimal('200')), (7, 'HyperFlux', Decimal('180')), (8, 'Nebula Runner', Decimal('140')), (9, 'Quantum Charge', Decimal('250')), (10, 'Echo Boost', Decimal('160')), (11, 'Storm Runner', Decimal('130')), (12, 'Apex Boost', Decimal('190')), (13, 'Velocity Wave', Decimal('170')), (14, 'Stride Master', Decimal('100')), (15, 'Trail Blazer', Decimal('200')), (16, 'Infinity Glide', Decimal('180')), (17, 'Solar Charge', Decimal('150')), (18, 'Pace Leader', Decimal('120')), (19, 'Canyon Racer', Decimal('250')), (20, 'Sky High', Decimal('210'))
+
+
+========================================
+Running: q12.py
+========================================
+('Storm Runner',), ('Apex Boost',), ('Velocity Wave',), ('Stride Master',), ('Trail Blazer',), ('Infinity Glide',), ('Solar Charge',), ('Pace Leader',), ('Canyon Racer',), ('Sky High',)
+
+

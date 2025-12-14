@@ -17,7 +17,7 @@ if __name__ == '__main__':
         special_id INT PRIMARY KEY,
         shoe_id INT NOT NULL,
         collection_name VARCHAR(31),
-		relese_date DATETIME,
+		release_date DATETIME,
         FOREIGN KEY (shoe_id) REFERENCES shoe(shoe_id))
     """)
 
