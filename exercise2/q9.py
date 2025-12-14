@@ -11,9 +11,13 @@ if __name__ == '__main__':
 
     cursor = mydb.cursor()
     
-    # Executing the SQL Query
+    # List all shoe names with the count of sizes available for each
+    # Use left join to include shoes that don’t have any size
     cursor.execute("""
-    ## PUT YOUR QUERY HERE ##
+    SELECT s.shoe_name, COUNT(ss.shoe_id)
+    FROM shoe s
+    LEFT JOIN shoe_size ss ON s.shoe_id = ss.shoe_id
+    GROUP BY s.shoe_id;
     """)
 
     # Fetch and print results as required by Listing 2
