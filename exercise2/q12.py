@@ -11,9 +11,13 @@ if __name__ == '__main__':
 
     cursor = mydb.cursor()
     
-    # Executing the SQL Query
+    # Find all shoes that have not been ordered without duplicates
     cursor.execute("""
-    ## PUT YOUR QUERY HERE ##
+    SELECT s.shoe_name
+    FROM shoe s
+    LEFT JOIN order_shoe os ON s.shoe_id = os.shoe_id
+    GROUP BY s.shoe_id
+    HAVING COUNT(os.order_id) = 0;
     """)
 
     # Fetch and print results as required by Listing 2
