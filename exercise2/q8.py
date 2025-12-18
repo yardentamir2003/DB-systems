@@ -18,6 +18,7 @@ if __name__ == '__main__':
     JOIN shoe_size ss ON shoe.shoe_id = ss.shoe_id
     JOIN size ON ss.size_id = size.size_id
     GROUP BY size.size_id
+    # Order by descending order
     ORDER BY average_price DESC;
     """)
 

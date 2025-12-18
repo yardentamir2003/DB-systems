@@ -16,7 +16,7 @@ if __name__ == '__main__':
     CREATE VIEW total_sales_per_shoe AS
     SELECT s.shoe_id, s.shoe_name, COUNT(os.shoe_id)*s.price AS total_revenue
     FROM shoe s
-    LEFT JOIN order_shoe os ON s.shoe_id = os.shoe_id
+    JOIN order_shoe os ON s.shoe_id = os.shoe_id
     GROUP BY s.shoe_id;
     """)
 

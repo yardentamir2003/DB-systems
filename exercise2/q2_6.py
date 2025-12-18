@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
     cursor = mydb.cursor()
     
-    # Create city table, define primary key
+    # Create city table, define foreign key
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS city (
         city_id INT PRIMARY KEY,
