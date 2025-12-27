@@ -18,7 +18,6 @@ if __name__ == '__main__':
         order_date DATETIME NOT NULL)
     """)
 
-    # !!! Commit the transaction to save the changes to the database!!!
-    mydb.commit()  
+    print(", ".join(str(row) for row in cursor.fetchall()))
     cursor.close()
     mydb.close()

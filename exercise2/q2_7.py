@@ -24,7 +24,6 @@ if __name__ == '__main__':
         FOREIGN KEY (city_id) REFERENCES city(city_id))
     """)
 
-    # !!! Commit the transaction to save the changes to the database!!!
-    mydb.commit()  
+    print(", ".join(str(row) for row in cursor.fetchall()))
     cursor.close()
     mydb.close()
