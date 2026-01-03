@@ -12,7 +12,10 @@ if __name__ == '__main__':
     # Create Opinion table
     cursor = mydb.cursor()
     cursor.execute("""
-    ## PUT YOUR CREATE QUERY ##
+    CREATE TABLE IF NOT EXISTS opinion (
+    rating_id INT PRIMARY KEY,
+    comment TEXT,
+    FOREIGN KEY (rating_id) REFERENCES rate(rating_id))
     """)
     print(', '.join(str(row) for row in cursor.fetchall()))
     cursor.close()

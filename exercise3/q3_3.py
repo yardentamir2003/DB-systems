@@ -12,7 +12,9 @@ if __name__ == '__main__':
     # Create Medicine table
     cursor = mydb.cursor()
     cursor.execute("""
-    ## PUT YOUR CREATE QUERY ##
+    CREATE TABLE IF NOT EXISTS medicine (
+    medicine_id INT PRIMARY KEY,
+    medicine_name VARCHAR(31) NOT NULL)
     """)
     print(', '.join(str(row) for row in cursor.fetchall()))
     cursor.close()

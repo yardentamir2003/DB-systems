@@ -12,7 +12,7 @@ if __name__ == '__main__':
     # Create database hosppdd
     cursor = mydb.cursor()
     cursor.execute("""
-    CREATE DATABASE hosppdd;
+    CREATE DATABASE IF NOT EXISTS hosppdd;
     """)
     print(', '.join(str(row) for row in cursor.fetchall()))
     cursor.close()
