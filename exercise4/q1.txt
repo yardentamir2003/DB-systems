@@ -1,3 +1,0 @@
-SELECT team, SUM(games_played * points_per_game) AS total_points
-FROM players
-GROUP BY team;

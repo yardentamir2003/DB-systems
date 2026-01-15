@@ -1,5 +1,0 @@
-SELECT pos.position, AVG(p.points_per_game)
-FROM players AS p
-JOIN positions AS pos
-ON p.player_name = pos.player_name
-GROUP BY pos.position;

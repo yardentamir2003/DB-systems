@@ -1,6 +1,0 @@
-SELECT p.player_id, p.player_name
-FROM players AS p
-JOIN teams AS t
-ON p.team = s.team
-WHERE t.draft_year > 2010
-AND p.points_per_game > 20
